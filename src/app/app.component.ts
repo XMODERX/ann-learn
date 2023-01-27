@@ -1,12 +1,15 @@
-import { Component } from "@angular/core";
-import { Model } from "./model";
+import { Component } from '@angular/core';
+import { User } from './model';
+
 @Component({
- selector: "todo-app",
- templateUrl: "app.component.html"
+  selector: 'todo-app',
+  templateUrl: 'app.component.html',
 })
+
 export class AppComponent {
- model = new Model();
- getName() {
- return this.model.user;
- }
+  user = new User('Moder');
+
+  getName() {
+    return this.user.name;
+  }
 }
