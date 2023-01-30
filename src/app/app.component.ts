@@ -12,4 +12,8 @@ export class AppComponent {
   getName() {
     return this.user.name;
   }
+
+  getTodoItems() {
+    return this.user.items;
+    }
 }
