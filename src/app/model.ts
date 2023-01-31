@@ -4,7 +4,7 @@ export class User {
     constructor(user: string) {
       this.name = user;
       this.items = [
-        new TodoItem('Buy Flowers', true),
+        new TodoItem('Buy Flowers', false),
         new TodoItem('Get Shoes', false),
         new TodoItem('Collect Tickets', false),
         new TodoItem('Call Joe', false),

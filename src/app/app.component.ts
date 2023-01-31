@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { User } from './model';
+import { User, TodoItem } from './model';
 
 @Component({
   selector: 'todo-app',
   templateUrl: 'app.component.html',
 })
-
 export class AppComponent {
   user = new User('Moder');
 
@@ -14,6 +13,11 @@ export class AppComponent {
   }
 
   getTodoItems() {
-    return this.user.items;
+    return this.user.items.filter((item) => !item.done);
+  }
+  addItem(newItem: string) {
+    if (newItem != '') {
+      this.user.items.push(new TodoItem(newItem, false));
     }
+  }
 }
